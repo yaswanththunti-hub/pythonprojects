@@ -18,13 +18,16 @@ if card==1:
             elif option==2 :
                 print("Enter the amount")
                 withdraw=int(input())
-                print("Please take your amount")
-                afterwithdraw=int(input("Do you want to check balance 1.yes 2.no :"))
-                if afterwithdraw==1:
-                    print("Your balance is :",balance-withdraw)
-                    print("Thank you visit again")
+                if balance>=withdraw:
+                    print("Please take your amount")
+                    afterwithdraw=int(input("Do you want to check balance 1.yes 2.no :"))
+                    if afterwithdraw==1:
+                        print("Your balance is :",balance-withdraw)
+                        print("Thank you visit again")
+                    else:
+                        print("Thank you visit again")
                 else:
-                    print("Thank you visit again")
+                    print("Insufficiant balance
             else :
                 print("Put the amount")
                 deposit=int(input())
